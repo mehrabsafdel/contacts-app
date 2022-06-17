@@ -1,0 +1,22 @@
+@import 'src/assets/variables';
+
+.alphabetNav {
+  min-width: 80vw;
+  padding: 1.5rem 0;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: row;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $green;
+    border-radius: 10px;
+  }
+
+  /* Firefox scrollbar styles :) */
+  scrollbar-width: thin;
+  scrollbar-color: $green transparent;
+}

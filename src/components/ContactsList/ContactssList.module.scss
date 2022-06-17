@@ -1,0 +1,12 @@
+@import "src/assets/variables";
+
+.contactsList {
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 15px;
+  background-color: $orange;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+}
