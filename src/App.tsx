@@ -4,7 +4,7 @@ import Pages from './pages';
 function App() {
   return (
       <div className='container'>
-        <Pages />
+          <Pages />
       </div>
   );
 }

@@ -1,17 +1,19 @@
 import { IContactDetails } from './interfaces';
 import style from './ContactDetails.module.scss'
 import getContactFullName from '../../../../helpers/getContactFullName';
+import Image from '../../../Image/Image';
 
 const ContactDetails = ({ contact, onCloseContactDetails } : IContactDetails) => {
 
     return (
         <div className={style.contactDetails}>
             <div className={style.imageBox}>
-                <picture>
-                    <source media="(min-width:650px)" srcSet={contact.picture.large} />
-                    <source media="(min-width:350px)" srcSet={contact.picture.medium} />
-                    <img src={contact.picture.thumbnail} alt={getContactFullName(contact.name)} />
-                </picture>
+                <Image
+                    largeSrc={contact.picture.large}
+                    mediumSrc={contact.picture.medium}
+                    thumbnailSrc={contact.picture.thumbnail}
+                    altText={getContactFullName(contact.name)}
+                />
             </div>
             <div className={style.informationBox}>
                 <h4>{getContactFullName(contact.name)}</h4>

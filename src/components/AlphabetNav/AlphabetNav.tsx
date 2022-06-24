@@ -1,9 +1,9 @@
 import { IAlphabetNavProps } from './interfaces';
-import AlphabetChar from "./AlphabetChar/AlphabetChar";
+import AlphabetChar from './AlphabetChar/AlphabetChar';
 import style from './AlphabetNav.module.scss'
 
 const AlphabetNav = ({ contactsMap, selectedAlphabet, setSelectedAlphabet } : IAlphabetNavProps) => {
-    const renderAlphabet = () => {
+    const renderAlphabets = () => {
         const alphabets = []
         for (let i = 65; i <= 90; i++) {
             const char = String.fromCharCode(i);
@@ -22,7 +22,7 @@ const AlphabetNav = ({ contactsMap, selectedAlphabet, setSelectedAlphabet } : IA
 
     return (
         <div className={style.alphabetNav}>
-            {renderAlphabet()}
+            {renderAlphabets()}
         </div>
     )
 }

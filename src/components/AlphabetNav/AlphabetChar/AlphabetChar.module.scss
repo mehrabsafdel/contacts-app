@@ -1,7 +1,9 @@
 @import 'src/assets/variables';
 
 .alphabetChar {
-  min-width: 45px;
+  all: unset;
+  box-sizing: border-box;
+  min-width: 50px;
   flex: 1;
   text-align: center;
   position: relative;
@@ -16,6 +18,14 @@
 
   &:hover {
     bottom: -10px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: unset;
+    &:hover {
+      bottom: 0;
+    }
   }
 
   .count {
